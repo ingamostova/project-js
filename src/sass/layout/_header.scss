@@ -1,0 +1,120 @@
+header {
+  height: 230px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--secondary-text-color);
+}
+
+.header {
+  padding-top: 40px;
+  background-image: url('/src/images/background-image-mb.jpg');
+}
+
+.header-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 54px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  color: var(--secondary-text-color);
+  font-size: 30px;
+}
+
+.header-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: baseline;
+  gap: 40px;
+
+  &__link {
+    color: var(--secondary-text-color);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.current-link {
+  border-bottom: 3px solid #ff001b;
+}
+
+.header-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__input {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    padding: 4px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 0.5px solid #ffffff;
+    color: var(--secondary-text-color);
+    &::placeholder {
+      color: var(--secondary-text-color);
+      font-weight: 400;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+    }
+    &:focus::placeholder {
+      color: transparent;
+    }
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    margin-left: -25px;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-logo__text {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    height: 219px;
+  }
+
+  .header {
+    background-image: url('/src/images/background-image-tb.jpg');
+  }
+
+  .header-form__input {
+    max-width: 336px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header {
+    height: 216px;
+  }
+
+  .header {
+    background-image: url('/src/images/background-image-desk.jpg');
+  }
+
+  .header-form__input {
+    max-width: 394px;
+  }
+}
