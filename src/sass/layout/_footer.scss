@@ -1,0 +1,38 @@
+.footer {
+  height: 100px;
+  padding: 30px;
+  text-align: center;
+  background-color: var(--backgroung-footer);
+}
+.footer-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text {
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: var(--footer-text-color);
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 79px;
+  }
+
+  .footer-text {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    height: 77px;
+  }
+}
