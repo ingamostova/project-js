@@ -16,6 +16,7 @@
   &:focus {
     background-color: var(--accent-color);
     border-color: var(--accent-color);
+    outline: none;
     cursor: pointer;
   }
 }
