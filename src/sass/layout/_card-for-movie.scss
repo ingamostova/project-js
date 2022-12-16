@@ -9,6 +9,10 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+
+  &__item {
+    flex-basis: 100%;
+  }
 }
 
 .gallery-thumb {
@@ -51,12 +55,23 @@
     flex-direction: row;
     gap: 32px;
     flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 704px;
+
+    &__item {
+      flex-basis: calc((100% - 32px * 1) / 2);
+    }
   }
 }
 
 @media screen and (min-width: 1280px) {
   .gallery-list {
     gap: 16px;
+    max-width: 1216px;
+
+    &__item {
+      flex-basis: calc((100% - 16px * 2) / 3);
+    }
   }
 
   .movie-info__name {
