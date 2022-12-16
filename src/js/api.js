@@ -34,23 +34,26 @@ fetchGenres().then(data =>
 
 const trendingParams = 'trending/movie/week';
 
-// fetchMovies(trendingParams).then(data => {
-//   console.log(data.results);
-//   createMarkup(data.results);
-// });
+fetchMovies(trendingParams).then(data => {
+  console.log(data.results);
+  createMarkup(data.results);
+});
 
 function createMarkup(arr) {
-  const markup = arr
-    .map(
-      item => `<li>
-      <img src="${item.poster_path}" alt="" />
-      <h2>${item.title}</h2>
-      <p>${item.genre_ids} ${item.release_date}</p>
-    </li>`
-    )
-    .join('');
-
-  gallery.insertAdjacentHTML('beforeend', markup);
+  //   for (const genre of arrGenresMovies) {
+  //     if (genre.id === ) {
+  //     }
+  //   }
+  //   const markup = arr
+  //     .map(
+  //       item => `<li>
+  //       <img src="${item.poster_path}" alt="" />
+  //       <h2>${item.title}</h2>
+  //       <p>${item.genre_ids} ${item.release_date}</p>
+  //     </li>`
+  //     )
+  //     .join('');
+  //   gallery.insertAdjacentHTML('beforeend', markup);
 }
 
 function getDetailsForMovie(id) {
