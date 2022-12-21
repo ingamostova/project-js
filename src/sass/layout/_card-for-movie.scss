@@ -11,12 +11,24 @@
   gap: 20px;
 
   &__item {
-    flex-basis: 100%;
+    flex-basis: 280px;
+    transition: all 250ms ease-out;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      transform: scale(1.05);
+    }
   }
 }
 
 .gallery-thumb {
   margin-bottom: 8px;
+}
+
+.gallery-img {
+  width: 280px;
+  height: 402px;
 }
 
 .movie-info__name {
@@ -62,6 +74,11 @@
       flex-basis: calc((100% - 32px * 1) / 2);
     }
   }
+
+  .gallery-img {
+    width: 336px;
+    height: 455px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -88,5 +105,10 @@
   .movie-info__rate {
     width: 40px;
     height: 20px;
+  }
+
+  .gallery-img {
+    width: 395px;
+    height: 574px;
   }
 }
